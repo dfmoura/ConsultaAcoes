@@ -68,7 +68,7 @@ futuro = modelo.make_future_dataframe(periods=n_dias, freq='B')
 previsao = modelo.predict(futuro)
 
 st.subheader('Previsão')
-st.write(previsao[['ds', 'yhat', 'yhat_lower', 'yhat_upper' ]].tail(n_dias))
+st.write(previsao[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail(n_dias))
 
 #grafico
 grafico1 = plot_plotly(modelo, previsao)
